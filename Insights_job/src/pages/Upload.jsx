@@ -3,7 +3,6 @@ import React from 'react'
 const Upload = () => {
   return (
     <>
-    <link to ="/upload" />
     <div className="bg-gray-900 h-screen w-full flex flex-col justify-center items-center">
       <h1 className="text-white text-4xl mb-8">Upload Page</h1>
       <form action="" method="post" className="bg-gray-600 p-8 rounded-lg shadow-lg">

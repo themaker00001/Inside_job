@@ -1,20 +1,22 @@
 
 import './App.css'
 import '@fontsource/roboto/300.css';
-import HomePage from "./assets/HomePage.png"
 import Home from './pages/Home'
 import Upload from './pages/Upload';
-import { BrowserRouter , Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter , Route, Routes } from 'react-router-dom';
+import Home2 from './pages/Home2';
+import Upload2 from './pages/Upload2';
 function App() {
 
   return (
-  <BrowserRouter>
+  <BrowserRouter> 
    <Routes>
-   <Route path="/" element={<Home />} />
+   <Route path="/" element={<Home2 />} />
   {/* <Home></Home> */}
-  <Route path="/upload" element={<Upload />} />
+  <Route path="/upload" element={<Upload2 />} />
   </Routes>
  </BrowserRouter>
+
 );
 }
 

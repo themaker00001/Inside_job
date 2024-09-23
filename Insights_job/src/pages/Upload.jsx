@@ -21,6 +21,7 @@ const Upload = () => {
             className="bg-gray-500 mt-6 px-6 py-2 text-white rounded-lg hover:bg-gray-400 transition-all"
           />
         </div>
+        <a href=""></a>
       </form>
     </div>
   </>

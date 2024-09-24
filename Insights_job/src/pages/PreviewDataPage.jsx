@@ -39,7 +39,7 @@ const PreviewDataPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
+    <div className="h-screen w-full bg-white p-8">
       <h2 className="text-3xl font-semibold mb-6 text-center">Preview Uploaded CSV Data</h2>
 
       {csvData.length > 0 ? (
@@ -48,7 +48,7 @@ const PreviewDataPage = () => {
             <thead>
               <tr>
                 {Object.keys(csvData[0]).map((header, index) => (
-                  <th key={index} className="px-4 py-2 text-left bg-gray-200">{header}</th>
+                  <th key={index} className="px-4 py-2 text-left bg-white">{header}</th>
                 ))}
               </tr>
             </thead>
@@ -79,7 +79,7 @@ const PreviewDataPage = () => {
               <button
                 key={page}
                 onClick={() => setCurrentPage(page)}
-                className={`mx-1 px-3 py-1 rounded ${page === currentPage ? 'bg-blue-600 text-white' : 'bg-gray-200'}`}
+                className={`mx-1 px-3 py-1 rounded ${page === currentPage ? 'bg-blue-600 text-white' : 'bg-white'}`}
               >
                 {page}
               </button>
@@ -100,7 +100,7 @@ const PreviewDataPage = () => {
       )}
 
       <div className="mt-6 text-center">
-        <Link to="/upload" className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg">
+        <Link to="/upload" className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300">
           Back to Upload
         </Link>
       </div>

@@ -8,6 +8,8 @@ import Home2 from './pages/Home2';
 import Upload2 from './pages/Upload2';
 import FileUpload from './pages/FileUploaded';
 import PreviewDataPage from './pages/PreviewDataPage';
+import SelectModel from './pages/SelectModel';
+import RandomForest from './pages/RandomForest';
 function App() {
 
   return (
@@ -18,7 +20,8 @@ function App() {
   <Route path="/upload" element={<Upload2 />} />
   <Route path="/uploadfile" element={<FileUpload />} /> {/* File Upload Page Route */}
   <Route path="/preview" element={<PreviewDataPage />} />
-
+  <Route path="/selectmodel" element={<SelectModel />} />
+  <Route path="/randomforest" element={<RandomForest />} />
   </Routes>
  </BrowserRouter>
 

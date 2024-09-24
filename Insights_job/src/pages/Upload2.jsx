@@ -3,7 +3,7 @@ import up from '../assets/up.jpg';
 import axios from 'axios';
 import Papa from 'papaparse';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
-
+import Upload_logo from '../assets/Upload_logo.svg';
 const UploadPage = () => {
   const [file, setFile] = useState(null);
   const [uploading, setUploading] = useState(false);
@@ -53,6 +53,11 @@ const UploadPage = () => {
     navigate('/preview');
   };
 
+  const handleSelectModel = () => {
+    //This one is going to navigate toward the select model page
+    navigate('/selectmodel');
+  }
+
   return (
     <>
       <div
@@ -76,6 +81,7 @@ const UploadPage = () => {
               className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
             />
             <div className="flex flex-col items-center">
+              <img src={Upload_logo} alt="" />
               <p className="text-gray-500">Drag & drop or click to upload your document</p>
             </div>
           </div>
@@ -113,6 +119,16 @@ const UploadPage = () => {
             >
               Preview Data
             </button>
+            
+          )}
+           {csvData.length > 0 && (
+            <button
+              className="w-full mt-6 bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-4 rounded-lg focus:outline-none transition duration-200"
+              onClick={handleSelectModel}
+            >
+              Select Model
+            </button>
+            
           )}
         </div>
       </div>
